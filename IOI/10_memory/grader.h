@@ -1,1 +1,0 @@
-char faceup(int C);
