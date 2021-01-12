@@ -1,0 +1,1 @@
+g++ median.cpp device.cpp && ./a.out

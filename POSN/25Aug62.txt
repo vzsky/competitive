@@ -1,0 +1,11 @@
+Math proof
+-   direct proof
+    p -> q
+-   indirect proof
+    - contraposition
+        ~q -> ~p
+    - by cases
+    - contradiction
+        ~p -> (Q^~Q)
+    - Induction
+        ~ F(n) -> F(n+1)

@@ -1,0 +1,1 @@
+g++ -std=c++14 -o cluedo grader.cpp cluedo.cpp && ./cluedo

@@ -1,0 +1,22 @@
+RMQ
+Range Maximum Query
+
+Table of n * log(n)
+
+build O(nlogn)
+query O(1)
+NO UPDATE!
+
+building
+rmq[0][i] = begining array
+rmq[i][j] = best(rmq[i-1][j], rmq[i-1][j+(1<<(i-1))])
+
+query
+
+given a, b
+
+distance = b-a+1
+level = log(distance)
+
+best(rmq[level][a], rmq[level][b-(1<<k)+1]) is answer
+
