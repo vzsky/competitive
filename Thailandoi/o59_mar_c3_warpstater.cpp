@@ -3,7 +3,6 @@ using namespace std;
 typedef pair<int,int> pii;
 #define x first
 #define y second
-
 bool sorty (pii a, pii b) {
   return a.y < b.y;
 }
@@ -28,10 +27,8 @@ void add (pii u) {
   }
   s.insert(u);
 }
-
 void del (pii u) {
   auto pos = s.find(u);
-
   auto now = pos;
   auto next = ++pos;
   pos--;
@@ -48,7 +45,6 @@ void del (pii u) {
   }
   s.erase(now);
 }
-
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
@@ -65,14 +61,12 @@ int main(){
   
   s.insert(a[0]);
   for (int i = 1; i < k; i++) add(a[i]);
-
   long long mn = cost;
   for (int i = k; i < n; i++) {
     add(a[i]);
     del(a[i-k]);
     mn = min(mn, cost);
   }
-
   cout << mn << endl;
   return 0;
 }
