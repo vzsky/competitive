@@ -22,7 +22,7 @@ Algorithms :
                 012 B26 -> X Dec
                 123 B26 -> X - ((0*26^2)*26) + 3*26^0
 
-    - RMP :
+    - KMP :
         - a prefix function array of pattern
             - how many of first elem is = to last elem at i
             - i run every char in pattern
