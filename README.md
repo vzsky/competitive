@@ -9,11 +9,12 @@ my competitive programming journey
 - Codejam - [Google CodeJam](https://codingcompetitions.withgoogle.com/codejam)
 - IOI - International Olympiad in Informatics
 - JOI - Japanese Olympiad in Informatics
-- Other OI - Other Olympiad in Informatics
+- OtherOI - Other Olympiad in Informatics
 - POSN - POSN level preparation (no online judge)
 - Programming.in.th - Thai OJ [programming.in.th](https://programming.in.th)
 - ProjectEuler - [ProjectEuler](https://projecteuler.net)
 - SPOJ - Sphere Online Judge ([spoj](https://spoj.com))
 - Thailand OI - Thailand Preparation Camp (OJ at [programming.in.th](https://beta.programming.in.th))
+- Ungraded - Just don't know where to keep these not-graded solutions.
 - USACO - USA Computing Olympiad ([USACO](http://usaco.org))
 - Misc - Well, Misc
