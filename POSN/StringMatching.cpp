@@ -54,7 +54,7 @@ Algorithms :
             -> Yes j = 3
             i = 6
             check b[6] == b[4]
-            -> No check[6] == b[2] // since b[5] == b[3] == b[p[3]] == b[1]
+            -> No check b[6] == b[2] // since b[5] == b[3] == b[p[3]] == b[1]
             -> No j = 0
             i = 7
             check b[7] == b[1]
