@@ -24,7 +24,6 @@ bool same (int a, int b) {
 bool check () {
 	int s, e, a, b;
 	cin >> s >> e >> a >> b;
-	s = p[s]; e = p[e]; a = p[a]; b = p[b];
 	s = (s == a)? b : (s == b)? a : s;
 	e = (e == a)? b : (e == b)? a : e;
 
