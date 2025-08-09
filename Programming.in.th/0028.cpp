@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std; 
+
+struct Team {
+  string name; 
+  int score, total_goal_scored, total_goal_lost;
+
+  bool operator < (const Team & o) const {
+    int goal_advantage = total_goal_scored - total_goal_lost; 
+    int o_goal_advantage = o.total_goal_scored - o.total_goal_lost;
+
+    if (score == o.score && (goal_advantage == o_goal_advantage))
+      return total_goal_scored < o.total_goal_scored;
+    if (score == o.score) 
+      return goal_advantage < o_goal_advantage;
+    return score < o.score; 
+  }
+
+} teams[4];
+
+int main () {
+  for (int i = 0; i < 4; i++) { 
+    cin >> teams[i].name;
+  }
+
+  int goal[4][4];
+  for (int i = 0; i < 4; i++) {
+    for (int j = 0; j < 4; j++) {
+      cin >> goal[i][j];
+    }
+  }
+
+  for (int i = 0; i < 4; i++) {
+    for (int j = 0; j < 4; j++) {
+      if (i == j) continue;
+      if (goal[i][j] >  goal[j][i]) teams[i].score += 3;
+      if (goal[i][j] == goal[j][i]) teams[i].score += 1;
+      teams[i].total_goal_scored += goal[i][j];
+      teams[i].total_goal_lost   += goal[j][i];
+    }
+  }
+
+  sort(teams, teams+4);
+
+  for (int i = 3; i >= 0; i--) {
+    cout << teams[i].name << ' ' << teams[i].score << "\n";
+  }
+
+  return 0;
+}

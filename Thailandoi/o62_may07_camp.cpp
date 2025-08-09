@@ -13,14 +13,14 @@ vector<A> endpoint[500100];
 long long best[500100];
 int from[500100], used[500100], mark[500100];
 vector<int> comp;
-map<int,int> m;
+unordered_map<int,int> m;
 
 int main(){
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
-  int n; cin >> n;
+  int n;
+  scanf("%d", &n);
   for (int i = 0; i < n; i++) {
-    int a, b, c; cin >> a >> b >> c;
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
     comp.push_back(a);
     comp.push_back(b);
     events.push_back({a, b, c});
@@ -34,7 +34,6 @@ int main(){
   }
 
   for (int b = 1; b <= comp.size(); b++) {
-    // b != 1 since first is always a
     best[b] = best[b-1];
     from[b] = b-1;
     for (auto [a, c, ind] : endpoint[b]) {
@@ -55,7 +54,7 @@ int main(){
     ans = max(ans, events[i].c);
   }
   ans += best[comp.size()];
-  cout << ans;
+  printf("%lld", ans);
 
   return 0;
 }

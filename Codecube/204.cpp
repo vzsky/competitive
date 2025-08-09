@@ -49,7 +49,8 @@ int main(){
 		}
 
 		for(auto x : g[t.node]) {
-			heap.push({x.node, t.w + x.w, t.stat|at[x.node]});
+      if (visited[x.node][t.stat|at[x.node]]) continue;
+      heap.push({x.node, t.w + x.w, t.stat|at[x.node]});
 		}
 	}
 	return 0;

@@ -80,16 +80,14 @@ int main(){
             int node = C*r+c+1;
             int ans = query(node, node);
             // if (ans == (int)2e9) while(1);
-            cout << ans <<endl;
+            cout << ans << "\n";
         }
         if (k == 4){
             int ans = query(1, RMXN);
             // if (ans == (int)2e9) while(1);
-            cout << ans <<endl;
+            cout << ans << "\n";
         }
     }
 
     return 0;
 }
-
-// 3 3 14 3 1 2 4 2 1 100 2 2 10 2 3 40 4 1 2 1 50 1 2 3 200 4 1 3 3 25 3 3 2 4 1 2 2 60 4
